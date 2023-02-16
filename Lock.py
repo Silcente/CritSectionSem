@@ -27,6 +27,7 @@ def task(common, tid, sem):
         sem.release()
 def main():
     lp = []
+    sem=multiprocessing.lock()
     common = Value('i', 0)
     sem = Value('i', 0)
     for tid in range(N):
